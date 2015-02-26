@@ -1,7 +1,8 @@
 <ul>
-  <li ng-repeat="hero in mainCtrl.superheros">
+  <li contentEditable="true" ng-repeat="hero in mainCtrl.superheros">
       Name: {{hero.name}}, Villian: {{hero.villian}}
       <button ng-click="mainCtrl.deleteSuperHero(hero)">Delete Hero</button>
+    <!--   <button ng-click="mainCtrl.editSuperHero(hero)">Edit Hero</button> -->
   </li>
 </ul>
 

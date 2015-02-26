@@ -32,12 +32,17 @@
         var index= superHeros.indexOf(hero);
 
         superHeros.splice(index, 1);
-      }
+      };
+
+      var editSuperHero = function () {
+
+      };
 
       return {
         getHeros: getSuperHeros,
         addHero: addSuperHero,
         deleteHero: deleteSuperHero,
+        editHero: editSuperHero,
       };
     });
 
