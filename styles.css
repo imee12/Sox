@@ -1,11 +1,67 @@
 .frontsox {
-  width: 1200px;
-  height: 900px;
-  margin: 50px;
-  padding: 50px;
+  width: 400px;
+  height: 400px;
+  margin: 20px;
+  padding: 20px;
+   border: 2px solid black;
+-webkit-box-shadow: 14px 7px 5px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 14px 7px 5px 0px rgba(0,0,0,0.75);
+box-shadow: 14px 7px 5px 0px rgba(0,0,0,0.75);
 }
+
+
+
+
+body{
+  background: url("images/concrete_seamless.png");
+  font-family:'Josefin Slab',serif
+
+  }
+
+.boysox {
+  width: 350px;
+  height: 300px;
+  margin: 0px 0px 0px 550px;
+  border: 2px solid black;
+  -webkit-box-shadow: 14px 7px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 14px 7px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 14px 7px 5px 0px rgba(0,0,0,0.75);
+
+}
+
+.kidsox {
+
+  width: 250px;
+  height: 200px;
+  border: 2px solid black;
+  -webkit-box-shadow: 14px 7px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 14px 7px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 14px 7px 5px 0px rgba(0,0,0,0.75);
+}
+
+.frontsox, .kidsox {
+  display: inline-block;
+  vertical-align: top;
+}
+
 
 h1 {
   font-size: 45px;
   text-align: center;
+}
+
+section, aside {
+  display: inline-block;
+
+}
+
+article img {
+  width: 200px;
+  height: 200px;
+}
+
+.soxx {
+  display: inline-block;
+  width: 300px;
+  margin: 10px;
 }

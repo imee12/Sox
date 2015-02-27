@@ -7,7 +7,7 @@
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
+        templateUrl: 'views/splash.html',
         controller: 'MainController as mainCtrl'
       })
       .when('/tiy', {
@@ -20,6 +20,15 @@
         templateUrl: 'views/splash.html',
         controller: 'MainController as mainCtrl' /// put what controller you want to control this here
       })
+      .when('/admin', {
+        templateUrl: 'views/admin.html',
+        controller: 'AdminController as adminCtrl' /// put what controller you want to control this here
+      })
+      .when('/client', {
+        templateUrl: 'views/client.html',
+        controller: 'ClientController as clientCtrl' /// put what controller you want to control this here
+      })
+
       .otherwise({
         redirectTo: '/not-found'
       });

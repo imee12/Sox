@@ -1,0 +1,22 @@
+<h2>ADMIN</h2>
+<article>
+  <div class="soxx" contentEditable="true" ng-repeat="hero in adminCtrl.superheros">
+    <p>  {{hero.name}}</p>
+      <img ng-src="{{ hero.photo}}" alt="">
+    <p>  Price: {{hero.price}} </p>
+      <button ng-click="adminCtrl.deleteSuperHero(hero)">Delete Sox</button>
+    <!--   <button ng-click="mainCtrl.editSuperHero(hero)">Edit Hero</button> -->
+  </div>
+</article>
+
+
+
+<form ng-submit="adminCtrl.addSuperHero(newHero)">
+<input type="text" ng-model="newHero.name" placeholder="Name">
+<input type="text" ng-model="newHero.photo" placeholder="Photo">
+<input type="text" ng-model="newHero.price" placeholder="Price">
+<button type="submit">Add Hero</button>
+
+</form>
+<!-- <button ng-click="adminCtrl.alertMe()">Alert Me!!!</button>
+ -->

@@ -4,21 +4,36 @@
     .factory('SuperHerosService', function () {
       var superHeros = [
         {
-          name: "Superman",
-          villian: "Lex Luthor"
+          name: "Monkey Socks",
+          photo: "images/monkeysox.jpg",
+          price: "$12"
         },
         {
-          name: "Black Widow",
-          villian: 'Magneto'
+          name: "This Sucks Socks",
+          photo: "images/suxsox.jpg",
+          price: "$12"
         },
         {
-          name: "Batman",
-          villian: "Joker"
+          name: "South Park Socks",
+          photo: "images/southparksox.jpg",
+          price: "$15"
         },
         {
-          name: "Super Woman",
-          villian: "Zod"
-        }
+          name: "Workaholic Socks",
+          photo: "images/workaholicsox.jpg",
+          price: "$16"
+        },
+        {
+        name: "Star Wars Socks",
+        photo: "images/StarWarssox.jpg",
+        price: "$26"
+      },
+      {
+      name: "Shark Socks",
+      photo: "images/sharksox.jpg",
+      price: "$16"
+    },
+
       ];
 
       var getSuperHeros = function () {
@@ -34,7 +49,8 @@
         superHeros.splice(index, 1);
       };
 
-      var editSuperHero = function () {
+      var editSuperHero = function (hero) {
+
 
       };
 
