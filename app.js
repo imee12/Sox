@@ -29,6 +29,12 @@
         controller: 'ClientController as clientCtrl' /// put what controller you want to control this here
       })
 
+      .when('/about', {
+        templateUrl: 'views/about.html',
+        controller: 'ClientController as clientCtrl' /// put what controller you want to control this here
+      })
+
+
       .otherwise({
         redirectTo: '/not-found'
       });

@@ -1,0 +1,32 @@
+ <header>
+<!-- <h2>SHOP!</h2> -->
+<img class="shoplogo" src="images/supersox.png" alt="">
+
+
+ </header>
+
+<div class="clientsox">
+<article>
+  <div class="soxx" contentEditable="true" ng-repeat="hero in clientCtrl.superheros">
+    <p>  {{hero.name}}</p>
+      <img ng-src="{{ hero.photo}}" alt="">
+    <p>  Price: {{hero.price}} </p>
+    <button ng-click="adminCtrl.deleteSuperHero(hero)">Buy </button>
+    <!--   <button ng-click="mainCtrl.editSuperHero(hero)">Edit Hero</button> -->
+  </div>
+</article>
+</div>
+
+
+<div class="clientnav">
+  <ul>
+  <li><a href="#/splash">Home</a></li>
+  <li><a href="#/client">Shop</a></li>
+  <li><a href="#/admin">Admin</a></li>
+  <li><a href="#/about">About</a></li>
+  </ul>
+
+</div>
+<footer>
+
+</footer>

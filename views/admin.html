@@ -1,4 +1,23 @@
 <h2>ADMIN</h2>
+
+<div class="adminnav">
+<ul>
+<li><a href="#/splash">Home</a></li>
+<li><a href="#/client">Shop</a></li>
+<li><a href="#/admin">Admin</a></li>
+<li><a href="#/about">About</a></li>
+</ul>
+</div>
+
+<form class="adminform" ng-submit="adminCtrl.addSuperHero(newHero)">
+<input type="text" ng-model="newHero.name" placeholder="Name">
+<input type="text" ng-model="newHero.photo" placeholder="Photo">
+<input type="text" ng-model="newHero.price" placeholder="Price">
+<button type="submit">Add Sox</button>
+
+</form>
+
+<div class="adminsox">
 <article>
   <div class="soxx" contentEditable="true" ng-repeat="hero in adminCtrl.superheros">
     <p>  {{hero.name}}</p>
@@ -8,15 +27,9 @@
     <!--   <button ng-click="mainCtrl.editSuperHero(hero)">Edit Hero</button> -->
   </div>
 </article>
+</div>
 
 
 
-<form ng-submit="adminCtrl.addSuperHero(newHero)">
-<input type="text" ng-model="newHero.name" placeholder="Name">
-<input type="text" ng-model="newHero.photo" placeholder="Photo">
-<input type="text" ng-model="newHero.price" placeholder="Price">
-<button type="submit">Add Hero</button>
-
-</form>
 <!-- <button ng-click="adminCtrl.alertMe()">Alert Me!!!</button>
  -->
