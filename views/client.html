@@ -7,11 +7,12 @@
 
 <div class="clientsox">
 <article>
-  <div class="soxx"  ng-repeat="hero in clientCtrl.superheros">
-    <p>  {{hero.name}}</p>
-      <img ng-src="{{ hero.photo}}" alt="">
-    <p>  Price: {{hero.price}} </p>
-    <button ng-click="clientCtrl.buySuperHero(hero)">Buy </button>
+  <div class="soxx"  ng-repeat="sox in clientCtrl.supersox"><a href="#/detail/{{$index}}">
+    <p>  {{sox.name}}</p>
+      <img ng-src="{{ sox.photo}}" alt="">
+    <p>  Price: {{sox.price}} </p>
+  </a>
+    <button ng-click="clientCtrl.buySuperSox(sox)">Buy </button>
     <!--   <button ng-click="mainCtrl.editSuperHero(hero)">Edit Hero</button> -->
   </div>
 </article>
@@ -25,11 +26,15 @@
   <li><a href="#/admin">Admin</a></li>
   <li><a href="#/about">About</a></li>
   </ul>
+  <div class="numSox" ng-controller="ClientController as clientCtrl">
+    {{ clientCtrl.numSoxInCart}}
+  </div>
+
+  <a href="#/shopcart"><img class="cart" src="images/shopcart.png" alt=""></a>
 
 </div>
 
-<div class="shopcart" ng-repeat"hero in clientCtrl.buySuperHeros">Your Sox
-  <p>  {{hero.name}}</p>
+
 
 </div>
 <footer>

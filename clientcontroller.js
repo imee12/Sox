@@ -1,10 +1,11 @@
 (function () {
   "use strict";
   angular.module('demoApp')
-    .controller('ClientController', function (SuperHerosService, $scope) {
+    .controller('ClientController', function (SuperSoxService, $scope) {
         var clientCtrl = this;
 
-        clientCtrl.superheros = SuperHerosService.getHeros();
+        clientCtrl.supersox = SuperSoxService.getSox();
+        clientCtrl.boughtSuperSox = SuperSoxService.getBoughtSox();
 
         // clientCtrl.alertMe = function () {
         //   alert("Hi from mainCtrl");
@@ -20,12 +21,21 @@
         //
         // };
 
-        clientCtrl.buySuperHero = function (boughtHero) {
+
+
+        clientCtrl.buySuperSox = function (newBoughtSox) {
           console.log("buy button works!");
-          SuperHerosService.buyHero(boughtHero);
-          $scope.boughtHero = {};
-          
-        }
+          console.log(newBoughtSox);
+          SuperSoxService.buySox(newBoughtSox);
+
+            $scope.newBoughtSox = {};
+
+        };
+
+        clientCtrl.numSoxInCart = SuperSoxService.getNumSox(clientCtrl.boughtSuperSox);
+
+
+
     });
 
 })();

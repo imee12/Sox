@@ -1,8 +1,8 @@
 (function () {
   "use strict";
   angular.module('demoApp')
-    .factory('SuperHerosService', function () {
-      var superHeros = [
+    .factory('SuperSoxService', function () {
+      var superSox = [
         {
           name: "Monkey Socks",
           photo: "images/monkeysox.jpg",
@@ -36,40 +36,69 @@
 
       ];
 
-      var boughtSuperHeros = [
+      var boughtSuperSox = [
 
 
       ];
-      var getSuperHeros = function () {
-        return superHeros;
-      };
-      var addSuperHero = function (hero) {
-        superHeros.push(hero);
+
+      var getSuperSox = function () {
+        return superSox;
       };
 
-      var deleteSuperHero = function (hero) {
-        var index= superHeros.indexOf(hero);
-
-        superHeros.splice(index, 1);
+      var getBougthSox = function () {
+          return boughtSuperSox;
       };
 
-      var editSuperHero = function (hero) {
-        var index= superHeros.indexOf(hero);
+      var addSuperSox = function (sox) {
+        superSox.push(sox);
+      };
 
+      var deleteSuperSox = function (sox) {
+        var index= superSox.indexOf(sox);
+        console.log(index);
+        superSox.splice(index, 1);
+      };
+
+      var getSingleSox = function (index) {
+        return superSox[index];
+      };
+
+      var editSuperSox = function (sox, index) {
+      superSox[index] = sox;
+
+    };
+
+    var getBoughtSox = function () {
+      return boughtSuperSox;
+
+    };
+
+
+      var buySuperSox = function (newBoughtSox) {
+        console.log(newBoughtSox);
+        boughtSuperSox.push(newBoughtSox);
+        console.log(boughtSuperSox);
+        console.log(boughtSuperSox.length);
 
       };
 
-      var buySuperHero = function (hero) {
-        boughtSuperHeros.push(hero);
-        return boughtSuperHeros;
+      var getNumBoughtSox= function (boughtSuperSox) {
+        return boughtSuperSox.length;
+        console.log(boughtSuperSox.length);
       }
 
+
+
       return {
-        getHeros: getSuperHeros,
-        addHero: addSuperHero,
-        deleteHero: deleteSuperHero,
-        editHero: editSuperHero,
-        buyHero: buySuperHero,
+
+        getSox: getSuperSox,
+        addSox: addSuperSox,
+        deleteSox: deleteSuperSox,
+        editSox: editSuperSox,
+        buySox: buySuperSox,
+        getBoughtSox: getBoughtSox,
+        getNumSox: getNumBoughtSox,
+        getSock: getSingleSox,
       };
     });
 

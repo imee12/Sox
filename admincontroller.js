@@ -1,24 +1,36 @@
 (function () {
   "use strict";
   angular.module('demoApp')
-    .controller('AdminController', function (SuperHerosService, $scope) {
+    .controller('AdminController', function (SuperSoxService, $scope, $routeParams, $location) {
         var adminCtrl = this;
 
-        adminCtrl.superheros = SuperHerosService.getHeros();
-
-        // adminCtrl.alertMe = function () {
-        //   alert("Hi from mainCtrl");
-        // };
-
-        adminCtrl.addSuperHero = function (newHero) {
-          SuperHerosService.addHero(newHero);
-          $scope.newHero = {};
+        adminCtrl.supersox = SuperSoxService.getSox();
+        adminCtrl.singleItem = SuperSoxService.getSock($routeParams.soxIndex);
+        adminCtrl.go = function (index) {
+          $location.path('/detail/' + index);
+          console.log("single sox index is:", adminCtrl.singleItem);
         };
 
-        adminCtrl.deleteSuperHero = function () {
-          SuperHerosService.deleteHero();
+        adminCtrl.addSuperSox = function (newSox) {
+          SuperSoxService.addSox(newSox);
+          $scope.newSox = {};
+        };
+
+        adminCtrl.deleteSuperSox = function (sox) {
+          SuperSoxService.deleteSox(sox);
 
         };
+
+        adminCtrl.getSingleSox = function (index) {
+
+        };
+
+        adminCtrl.editItem = function (sox) {
+          console.log("edit button works!");
+          SuperSoxService.editSox(sox, $routeParams.soxIndex);
+          $location.path('/detail' + $routeParams.soxIndex);
+        }
+
 
     });
 

@@ -1,22 +1,22 @@
 (function () {
   "use strict";
   angular.module('demoApp')
-    .controller('MainController', function (SuperHerosService, $scope) {
+    .controller('MainController', function (SuperSoxService, $scope) {
         var mainCtrl = this;
 
-        mainCtrl.superheros = SuperHerosService.getHeros();
+        mainCtrl.supersox = SuperSoxService.getSox();
 
         mainCtrl.alertMe = function () {
           alert("Hi from mainCtrl");
         };
 
-        mainCtrl.addSuperHero = function (newHero) {
-          SuperHerosService.addHero(newHero);
-          $scope.newHero = {};
+        mainCtrl.addSuperSox = function (newSox) {
+          SuperSoxService.addHero(newSox);
+          $scope.newSox = {};
         };
 
-        mainCtrl.deleteSuperHero = function () {
-          SuperHerosService.deleteHero();
+        mainCtrl.deleteSuperSox = function () {
+          SuperSoxService.deleteSox();
 
         };
 

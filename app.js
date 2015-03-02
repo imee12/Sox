@@ -34,6 +34,24 @@
         controller: 'ClientController as clientCtrl' /// put what controller you want to control this here
       })
 
+      .when('/edit/:soxIndex', {
+        templateUrl: 'views/editDetail.html',
+        controller: 'AdminController as adminCtrl'
+
+      })
+
+      .when('/detail/:soxIndex',{
+        templateUrl: 'views/detail.html',
+        controller: 'ClientController as clientCtrl'
+
+      })
+
+      .when('/shopcart', {
+        templateUrl: 'views/shopcart.html',
+        controller: 'ClientController as clientCtrl'
+
+      })
+
 
       .otherwise({
         redirectTo: '/not-found'

@@ -194,3 +194,43 @@ header {
   text-align: center;
   margin: 10px;
 }
+
+.cart {
+  width: 200px;
+
+}
+
+.soxxcart img {
+  width: 200px;
+  height: 200px;
+  margin: 10px;
+
+}
+
+.soxxcart {
+  display: inline-block;
+}
+
+.shopcartp {
+  margin: 10px 0px 10px 550px;
+  width: 150px;
+}
+
+.numSox, .cart {
+  display: block;
+}
+
+.numSox {
+  margin: 0px 0px 0px 30px;
+  font-size: 35px;
+}
+
+.editItem {
+  margin: 40px;
+  font-size: 30px;
+}
+
+.backadmin{
+  font-size: 30px;
+  margin:5px;
+}
