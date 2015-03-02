@@ -7,11 +7,11 @@
 
 <div class="clientsox">
 <article>
-  <div class="soxx" contentEditable="true" ng-repeat="hero in clientCtrl.superheros">
+  <div class="soxx"  ng-repeat="hero in clientCtrl.superheros">
     <p>  {{hero.name}}</p>
       <img ng-src="{{ hero.photo}}" alt="">
     <p>  Price: {{hero.price}} </p>
-    <button ng-click="adminCtrl.deleteSuperHero(hero)">Buy </button>
+    <button ng-click="clientCtrl.buySuperHero(hero)">Buy </button>
     <!--   <button ng-click="mainCtrl.editSuperHero(hero)">Edit Hero</button> -->
   </div>
 </article>
@@ -25,6 +25,11 @@
   <li><a href="#/admin">Admin</a></li>
   <li><a href="#/about">About</a></li>
   </ul>
+
+</div>
+
+<div class="shopcart" ng-repeat"hero in clientCtrl.buySuperHeros">Your Sox
+  <p>  {{hero.name}}</p>
 
 </div>
 <footer>

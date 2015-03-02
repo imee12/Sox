@@ -26,7 +26,7 @@ body{
   width: 450px;
   height: 300px;
   margin: 00px 0px 0px 250px;
-  border: 2px solid black;
+/*   border: 2px solid black; */
   -webkit-box-shadow: 14px 7px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 14px 7px 5px 0px rgba(0,0,0,0.75);
   box-shadow: 14px 7px 5px 0px rgba(0,0,0,0.75);
@@ -37,7 +37,7 @@ body{
 
   width: 350px;
   height: 300px;
-  border: 2px solid black;
+/*   border: 2px solid black; */
   margin: 0px 0px 0px 140px;
   -webkit-box-shadow: 14px 7px 5px 0px rgba(0,0,0,0.75);
   -moz-box-shadow: 14px 7px 5px 0px rgba(0,0,0,0.75);
@@ -181,6 +181,9 @@ header {
 .sockgallery {
   width: 600px;
   margin: 0px 0px 10px 50px;
+  -webkit-box-shadow: 14px 7px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 14px 7px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 14px 7px 5px 0px rgba(0,0,0,0.75);
 }
 
 .socklogo {

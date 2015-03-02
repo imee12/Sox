@@ -10,16 +10,22 @@
         //   alert("Hi from mainCtrl");
         // };
 
-        clientCtrl.addSuperHero = function (newHero) {
-          SuperHerosService.addHero(newHero);
-          $scope.newHero = {};
-        };
+        // clientCtrl.addSuperHero = function (newHero) {
+        //   SuperHerosService.addHero(newHero);
+        //   $scope.newHero = {};
+        // };
+        //
+        // clientCtrl.deleteSuperHero = function () {
+        //   SuperHerosService.deleteHero();
+        //
+        // };
 
-        clientCtrl.deleteSuperHero = function () {
-          SuperHerosService.deleteHero();
-
-        };
-
+        clientCtrl.buySuperHero = function (boughtHero) {
+          console.log("buy button works!");
+          SuperHerosService.buyHero(boughtHero);
+          $scope.boughtHero = {};
+          
+        }
     });
 
 })();

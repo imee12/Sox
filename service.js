@@ -36,6 +36,10 @@
 
       ];
 
+      var boughtSuperHeros = [
+
+
+      ];
       var getSuperHeros = function () {
         return superHeros;
       };
@@ -50,15 +54,22 @@
       };
 
       var editSuperHero = function (hero) {
+        var index= superHeros.indexOf(hero);
 
 
       };
+
+      var buySuperHero = function (hero) {
+        boughtSuperHeros.push(hero);
+        return boughtSuperHeros;
+      }
 
       return {
         getHeros: getSuperHeros,
         addHero: addSuperHero,
         deleteHero: deleteSuperHero,
         editHero: editSuperHero,
+        buyHero: buySuperHero,
       };
     });
 
