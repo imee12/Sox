@@ -6,6 +6,7 @@
 
         clientCtrl.supersox = SuperSoxService.getSox();
         clientCtrl.boughtSuperSox = SuperSoxService.getBoughtSox();
+        clientCtrl.total = SuperSoxService.getTotal();
 
         clientCtrl.singleItem = SuperSoxService.getSock($routeParams.soxIndex);
         clientCtrl.go = function (index) {

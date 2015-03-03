@@ -6,32 +6,32 @@
         {
           name: "Monkey Socks",
           photo: "images/monkeysox.jpg",
-          price: "$12"
+          price: "12.00"
         },
         {
           name: "This Sucks Socks",
           photo: "images/suxsox.jpg",
-          price: "$12"
+          price: "12.00"
         },
         {
           name: "South Park Socks",
           photo: "images/southparksox.jpg",
-          price: "$15"
+          price: "15.00"
         },
         {
           name: "Workaholic Socks",
           photo: "images/workaholicsox.jpg",
-          price: "$16"
+          price: "16.00"
         },
         {
         name: "Star Wars Socks",
         photo: "images/StarWarssox.jpg",
-        price: "$26"
+        price: "26.00"
       },
       {
       name: "Shark Socks",
       photo: "images/sharksox.jpg",
-      price: "$16"
+      price: "16.00"
     },
 
       ];
@@ -89,13 +89,20 @@
 
       var getTotal = function () {
         var total= 0;
-        for(var i = 0; i < boughtSuperSox.length; i++){
-       var boughtSox = boughtSuperSox[i];
-       total += (boughtSuperSox.price * boughtSuperSox.quantity);
-   }
-   return total;
+        if(boughtSuperSox.length > 0){
+          for(var i=0; i < boughtSuperSox.length; i ++) {
+            console.log(boughtSuperSox.length);
+            total += +boughtSuperSox[i].price;
+          }
+        }
+        return total;
+   };
 
-      };
+    // var deleteBoughtSox: function () {
+    //
+    // }
+
+
 
 
 
@@ -112,5 +119,7 @@
         getTotal: getTotal
       };
     });
+    // .factory('CartService', function (_) {
+
 
 })();
