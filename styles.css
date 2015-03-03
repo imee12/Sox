@@ -209,10 +209,13 @@ header {
 
 .soxxcart {
   display: inline-block;
+  font-size: 15px;
+  margin: 100px 0px 0px 0px;
+  text-align: center;
 }
 
 .shopcartp {
-  margin: 10px 0px 10px 550px;
+  margin: 0px 0px 90px 550px;
   width: 150px;
 }
 
@@ -233,4 +236,17 @@ header {
 .backadmin{
   font-size: 30px;
   margin:5px;
+}
+
+.detailPhoto {
+  width: 350px;
+  margin: 0px 0px 0px 450px;
+}
+
+.backshop {
+  font-size: 40px;
+}
+
+a {
+  text-decoration: none;
 }

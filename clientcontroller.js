@@ -1,11 +1,16 @@
 (function () {
   "use strict";
   angular.module('demoApp')
-    .controller('ClientController', function (SuperSoxService, $scope) {
+    .controller('ClientController', function (SuperSoxService, $scope, $routeParams, $location) {
         var clientCtrl = this;
 
         clientCtrl.supersox = SuperSoxService.getSox();
         clientCtrl.boughtSuperSox = SuperSoxService.getBoughtSox();
+
+        clientCtrl.singleItem = SuperSoxService.getSock($routeParams.soxIndex);
+        clientCtrl.go = function (index) {
+          $location.path('/detal/' + index);
+        };
 
         // clientCtrl.alertMe = function () {
         //   alert("Hi from mainCtrl");
