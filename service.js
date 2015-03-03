@@ -1,40 +1,43 @@
 (function () {
   "use strict";
   angular.module('demoApp')
-    .factory('SuperSoxService', function () {
-      var superSox = [
-        {
-          name: "Monkey Socks",
-          photo: "images/monkeysox.jpg",
-          price: "12.00"
-        },
-        {
-          name: "This Sucks Socks",
-          photo: "images/suxsox.jpg",
-          price: "12.00"
-        },
-        {
-          name: "South Park Socks",
-          photo: "images/southparksox.jpg",
-          price: "15.00"
-        },
-        {
-          name: "Workaholic Socks",
-          photo: "images/workaholicsox.jpg",
-          price: "16.00"
-        },
-        {
-        name: "Star Wars Socks",
-        photo: "images/StarWarssox.jpg",
-        price: "26.00"
-      },
-      {
-      name: "Shark Socks",
-      photo: "images/sharksox.jpg",
-      price: "16.00"
-    },
+    .factory('SuperSoxService', function ($http) {
 
-      ];
+      var url = 'http://tiy-fee-rest.herokuapp.com/collections/sox';
+
+    //   var superSox = [
+    //     {
+    //       name: "Monkey Socks",
+    //       photo: "images/monkeysox.jpg",
+    //       price: "12.00"
+    //     },
+    //     {
+    //       name: "This Sucks Socks",
+    //       photo: "images/suxsox.jpg",
+    //       price: "12.00"
+    //     },
+    //     {
+    //       name: "South Park Socks",
+    //       photo: "images/southparksox.jpg",
+    //       price: "15.00"
+    //     },
+    //     {
+    //       name: "Workaholic Socks",
+    //       photo: "images/workaholicsox.jpg",
+    //       price: "16.00"
+    //     },
+    //     {
+    //     name: "Star Wars Socks",
+    //     photo: "images/StarWarssox.jpg",
+    //     price: "26.00"
+    //   },
+    //   {
+    //   name: "Shark Socks",
+    //   photo: "images/sharksox.jpg",
+    //   price: "16.00"
+    // },
+
+    //  ];
 
       var boughtSuperSox = [
 
@@ -42,29 +45,41 @@
       ];
 
       var getSuperSox = function () {
-        return superSox;
+        // return superSox;
+        return $http.get(url);
       };
 
       var getBougthSox = function () {
           return boughtSuperSox;
       };
 
-      var addSuperSox = function (sox) {
-        superSox.push(sox);
+      var addSuperSox = function (newSox) {
+        // superSox.push(sox);
+        console.log("add button works!");
+        $http.post(url, newSox);
       };
 
-      var deleteSuperSox = function (sox) {
-        var index= superSox.indexOf(sox);
-        console.log(index);
-        superSox.splice(index, 1);
+      var deleteSuperSox = function (id) {
+        // var index= superSox.indexOf(sox);
+         console.log("delete button works!");
+         console.log(id);
+        // superSox.splice(index, 1);
+        $http.delete(url + '/' + id);
+      //  $rootScope.$broadcast('product:deleted');
+
       };
 
-      var getSingleSox = function (index) {
-        return superSox[index];
+      var getSingleSox = function (id) {
+        // return superSox[index];
+
+        return $http.get(url + '/' + id);
       };
 
-      var editSuperSox = function (sox, index) {
-      superSox[index] = sox;
+      var editSuperSox = function (sox, id) {
+//      superSox[index] = sox;
+      console.log("edit button works!");
+      $http.put(url + '/' + id, sox);
+
 
     };
 
@@ -82,21 +97,21 @@
 
       };
 
-      var getNumBoughtSox= function (boughtSuperSox) {
-        return boughtSuperSox.length;
-        console.log(boughtSuperSox.length);
-      };
-
-      var getTotal = function () {
-        var total= 0;
-        if(boughtSuperSox.length > 0){
-          for(var i=0; i < boughtSuperSox.length; i ++) {
-            console.log(boughtSuperSox.length);
-            total += +boughtSuperSox[i].price;
-          }
-        }
-        return total;
-   };
+  //     var getNumBoughtSox= function (boughtSuperSox) {
+  //       return boughtSuperSox.length;
+  //       console.log(boughtSuperSox.length);
+  //     };
+   //
+  //     var getTotal = function () {
+  //       var total= 0;
+  //       if(boughtSuperSox.length > 0){
+  //         for(var i=0; i < boughtSuperSox.length; i ++) {
+  //           console.log(boughtSuperSox.length);
+  //           total += +boughtSuperSox[i].price;
+  //         }
+  //       }
+  //       return total;
+  //  };
 
     // var deleteBoughtSox: function () {
     //
@@ -114,9 +129,9 @@
         editSox: editSuperSox,
         buySox: buySuperSox,
         getBoughtSox: getBoughtSox,
-        getNumSox: getNumBoughtSox,
+      //  getNumSox: getNumBoughtSox,
         getSock: getSingleSox,
-        getTotal: getTotal
+      //  getTotal: getTotal
       };
     });
     // .factory('CartService', function (_) {

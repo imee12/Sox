@@ -1,11 +1,19 @@
 (function () {
   "use strict";
   angular.module('demoApp')
-    .controller('AdminController', function (SuperSoxService, $scope, $routeParams, $location) {
+    .controller('AdminController', function (SuperSoxService, $rootScope, $routeParams, $location) {
         var adminCtrl = this;
 
-        adminCtrl.supersox = SuperSoxService.getSox();
-        adminCtrl.singleItem = SuperSoxService.getSock($routeParams.soxIndex);
+        SuperSoxService.getSox().success(function(data){
+          adminCtrl.supersox = data;
+        });
+
+        SuperSoxService.getSock($routeParams.soxId).success(function(data){
+           adminCtrl.singleItem = data;
+         });
+
+         adminCtrl.currentIndex = $routeParams.soxId;
+
         adminCtrl.go = function (index) {
           $location.path('/detail/' + index);
           console.log("single sox index is:", adminCtrl.singleItem);
@@ -13,11 +21,11 @@
 
         adminCtrl.addSuperSox = function (newSox) {
           SuperSoxService.addSox(newSox);
-          $scope.newSox = {};
+          //$scope.newSox = {};
         };
 
-        adminCtrl.deleteSuperSox = function (sox) {
-          SuperSoxService.deleteSox(sox);
+        adminCtrl.deleteSuperSox = function (id) {
+          SuperSoxService.deleteSox(id);
 
         };
 
@@ -25,10 +33,11 @@
 
         };
 
-        adminCtrl.editItem = function (sox) {
-          console.log("edit button works!");
-          SuperSoxService.editSox(sox, $routeParams.soxIndex);
-          $location.path('/detail' + $routeParams.soxIndex);
+        adminCtrl.editItem = function (sox, id) {
+
+        SuperSoxService.editSox(sox, $routeParams.soxId);
+
+          $location.path('/detail' + $routeParams.soxId);
         }
 
 

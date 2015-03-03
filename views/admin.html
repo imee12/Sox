@@ -25,9 +25,9 @@
     <p>  {{sox.name}}</p>
       <img ng-src="{{ sox.photo}}" alt="">
     <p>  Price: {{sox.price}} </p>
-      <button ng-click="adminCtrl.deleteSuperSox(sox)">Delete Sox</button> |
+      <button ng-click="adminCtrl.deleteSuperSox(sox._id)">Delete Sox</button> |
     <!--   <button ng-click="mainCtrl.editSuperHero(hero)">Edit Hero</button> -->
-  <a href="#/edit/{{$index}}">Edit</a>
+  <a href="#/edit/{{sox._id}}">Edit</a>
   </div>
 </article>
 </div>
