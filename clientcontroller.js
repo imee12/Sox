@@ -39,7 +39,9 @@
 
         clientCtrl.numSoxInCart = SuperSoxService.getNumSox(clientCtrl.boughtSuperSox);
 
-
+        clientCtrl.getTotal = function(boughtSuperSox) {
+          console.log()
+        };
 
     });
 

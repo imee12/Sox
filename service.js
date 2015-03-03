@@ -85,7 +85,17 @@
       var getNumBoughtSox= function (boughtSuperSox) {
         return boughtSuperSox.length;
         console.log(boughtSuperSox.length);
-      }
+      };
+
+      var getTotal = function () {
+        var total= 0;
+        for(var i = 0; i < boughtSuperSox.length; i++){
+       var boughtSox = boughtSuperSox[i];
+       total += (boughtSuperSox.price * boughtSuperSox.quantity);
+   }
+   return total;
+
+      };
 
 
 
@@ -99,6 +109,7 @@
         getBoughtSox: getBoughtSox,
         getNumSox: getNumBoughtSox,
         getSock: getSingleSox,
+        getTotal: getTotal
       };
     });
 
