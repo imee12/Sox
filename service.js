@@ -99,10 +99,10 @@
 
       };
 
-      var getComs = function () {
-
-        return $http.get(url);
-      };
+      // var getComs = function () {
+      //
+      //   return $http.get(url);
+      // };
 
 
 
@@ -112,7 +112,7 @@
 
 
         sox.comments.push(NewCom);
-        $http.put(url + '/' + sox._id, Newcom);
+        $http.put(url + '/' + sox._id, sox);
       };
 
   //     var getNumBoughtSox= function (boughtSuperSox) {
@@ -146,7 +146,7 @@
         getSock: getSingleSox,
       //  getTotal: getTotal
         addCom: addComment,
-        getComs: getComs,
+      //  getComs: getComs,
       };
     })
 

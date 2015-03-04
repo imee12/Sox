@@ -5,9 +5,9 @@
         var comCtrl = this;
 
     //  comCtrl.coms = SuperService.getComs();
-       SuperSoxService.getComs().success(function(data){
-         comCtrl.coms = data;
-       });
+      //  SuperSoxService.getComs().success(function(data){
+      //    comCtrl.coms = data;
+      //  });
       SuperSoxService.getSock($routeParams.soxId).success(function(data){
          comCtrl.singleItem = data;
        });

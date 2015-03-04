@@ -52,6 +52,11 @@
 
       })
 
+      .when('/directive', {
+        templateUrl: 'views/directive.html',
+        controller: 'ClientController as clientCtrl'
+
+      })
 
       .otherwise({
         redirectTo: '/not-found'
