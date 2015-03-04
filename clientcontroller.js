@@ -1,7 +1,7 @@
 (function () {
   "use strict";
   angular.module('demoApp')
-    .controller('ClientController', function (SuperSoxService, $scope, $routeParams, $location) {
+    .controller('ClientController', function (SuperSoxService, $rootScope, $routeParams, $location) {
         var clientCtrl = this;
 
       //  clientCtrl.supersox = SuperSoxService.getSox();
@@ -25,7 +25,7 @@
 
 
         clientCtrl.go = function (id) {
-          $location.path('/detail/' + id);
+          $location.path('/detail/' + $routeParams.soxId);
         };
 
         // clientCtrl.alertMe = function () {
@@ -49,7 +49,7 @@
           console.log(newBoughtSox);
           SuperSoxService.buySox(newBoughtSox);
 
-            $scope.newBoughtSox = {};
+          //  $scope.newBoughtSox = {};
 
         };
 

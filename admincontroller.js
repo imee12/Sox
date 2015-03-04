@@ -14,10 +14,10 @@
 
          adminCtrl.currentIndex = $routeParams.soxId;
 
-        adminCtrl.go = function (id) {
-          $location.path('/detail/' + id);
-          console.log("single sox id is:", adminCtrl.singleItem);
-        };
+        // adminCtrl.go = function (id) {
+        //   $location.path('/edit/' + id);
+        //   console.log("single sox id is:", adminCtrl.singleItem);
+        // };
 
         adminCtrl.addSuperSox = function (newSox) {
           SuperSoxService.addSox(newSox);
@@ -37,7 +37,7 @@
 
         SuperSoxService.editSox(sox, $routeParams.soxId);
 
-          $location.path('/detail' + $routeParams.soxId);
+          $location.path('/edit' + $routeParams.soxId);
         }
 
 

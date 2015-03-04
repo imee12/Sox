@@ -7,7 +7,7 @@
 
 <div class="clientsox">
 <article>
-  <div class="soxx"  ng-repeat="sox in clientCtrl.supersox"><a href="#/detail/{{$index}}">
+  <div class="soxx"  ng-repeat="sox in clientCtrl.supersox"><a href="#/detail/{{sox._id}}">
     <p>  {{sox.name}}</p>
       <img ng-src="{{ sox.photo}}" alt="">
     <p>  Price: {{sox.price}} </p>
