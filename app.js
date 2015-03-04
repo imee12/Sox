@@ -34,13 +34,13 @@
         controller: 'ClientController as clientCtrl' /// put what controller you want to control this here
       })
 
-      .when('/edit/:soxIndex', {
+      .when('/edit/:soxId', {
         templateUrl: 'views/editDetail.html',
         controller: 'AdminController as adminCtrl'
 
       })
 
-      .when('/detail/:soxIndex',{
+      .when('/detail/:soxId',{
         templateUrl: 'views/detail.html',
         controller: 'ClientController as clientCtrl'
 
@@ -57,10 +57,10 @@
         redirectTo: '/not-found'
       });
 
-      // .constant('_', _);
-
-  });
 
 
+  })
+
+ .constant('_', _);
 
 })();

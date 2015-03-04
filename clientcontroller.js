@@ -10,7 +10,6 @@
          clientCtrl.supersox = data;
        });
 
-       console.log(clientCtrl.superSox);
 
 
 
@@ -21,12 +20,12 @@
 
         clientCtrl.currentIndex = $routeParams.soxId;
 
-      //  clientCtrl.boughtSuperSox = SuperSoxService.getBoughtSox();
+       clientCtrl.boughtSuperSox = SuperSoxService.getBoughtSox();
       //  clientCtrl.total = SuperSoxService.getTotal();
 
 
-        clientCtrl.go = function (index) {
-          $location.path('/detal/' + index);
+        clientCtrl.go = function (id) {
+          $location.path('/detail/' + id);
         };
 
         // clientCtrl.alertMe = function () {
@@ -45,15 +44,15 @@
 
 
 
-        // clientCtrl.buySuperSox = function (newBoughtSox) {
-        //   console.log("buy button works!");
-        //   console.log(newBoughtSox);
-        //   SuperSoxService.buySox(newBoughtSox);
-        //
-        //     $scope.newBoughtSox = {};
-        //
-        // };
-        //
+        clientCtrl.buySuperSox = function (newBoughtSox) {
+          console.log("buy button works!");
+          console.log(newBoughtSox);
+          SuperSoxService.buySox(newBoughtSox);
+
+            $scope.newBoughtSox = {};
+
+        };
+
         // clientCtrl.numSoxInCart = SuperSoxService.getNumSox(clientCtrl.boughtSuperSox);
         //
         // clientCtrl.getTotal = function(boughtSuperSox) {

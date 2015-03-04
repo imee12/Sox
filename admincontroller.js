@@ -14,9 +14,9 @@
 
          adminCtrl.currentIndex = $routeParams.soxId;
 
-        adminCtrl.go = function (index) {
-          $location.path('/detail/' + index);
-          console.log("single sox index is:", adminCtrl.singleItem);
+        adminCtrl.go = function (id) {
+          $location.path('/detail/' + id);
+          console.log("single sox id is:", adminCtrl.singleItem);
         };
 
         adminCtrl.addSuperSox = function (newSox) {
@@ -29,7 +29,7 @@
 
         };
 
-        adminCtrl.getSingleSox = function (index) {
+        adminCtrl.getSingleSox = function (id) {
 
         };
 
