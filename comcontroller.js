@@ -1,16 +1,21 @@
 (function () {
   "use strict";
   angular.module('demoApp')
-    .controller('CommentController', function (CommentService, $rootScope, $routeParams, $location) {
+    .controller('CommentController', function (SuperSoxService, $rootScope, $routeParams, $location) {
         var comCtrl = this;
 
-      comCtrl.coms = CommentService.getComs();
-      // CommentService.getComs().success(function(data){
-      //    comCtrl.coms = data;
+    //  comCtrl.coms = SuperService.getComs();
+       SuperSoxService.getComs().success(function(data){
+         comCtrl.coms = data;
+       });
+      SuperSoxService.getSock($routeParams.soxId).success(function(data){
+         comCtrl.singleItem = data;
+       });
 
+       comCtrl.currentIndex = $routeParams.soxId;
 
-      comCtrl.addCom = function (Newcom) {
-        CommentService.addCom(Newcom);
+      comCtrl.addCom = function (sox, NewCom) {
+        SuperSoxService.addCom(sox, NewCom);
       };
 
     });

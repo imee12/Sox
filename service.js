@@ -55,6 +55,7 @@
 
       var addSuperSox = function (newSox) {
         // superSox.push(sox);
+        newSox.comments = [];
         console.log("add button works!");
         $http.post(url, newSox);
       };
@@ -64,6 +65,7 @@
          console.log("delete button works!");
          console.log(id);
         // superSox.splice(index, 1);
+
         $http.delete(url + '/' + id);
       //  $rootScope.$broadcast('product:deleted');
 
@@ -97,6 +99,22 @@
 
       };
 
+      var getComs = function () {
+
+        return $http.get(url);
+      };
+
+
+
+      var addComment = function (sox, NewCom) {
+        console.log("add comment button works!");
+      //  sox.comments.push(Newcom);
+
+
+        sox.comments.push(NewCom);
+        $http.put(url + '/' + sox._id, Newcom);
+      };
+
   //     var getNumBoughtSox= function (boughtSuperSox) {
   //       return boughtSuperSox.length;
   //       console.log(boughtSuperSox.length);
@@ -116,11 +134,6 @@
     // var deleteBoughtSox: function () {
     //
     // }
-
-
-
-
-
       return {
 
         getSox: getSuperSox,
@@ -132,25 +145,9 @@
       //  getNumSox: getNumBoughtSox,
         getSock: getSingleSox,
       //  getTotal: getTotal
+        addCom: addComment,
+        getComs: getComs,
       };
     })
-     .factory('CommentService', function () {
-       var coms = [];
 
-       var getComments = function () {
-          return coms;
-         //return $http.get(url);
-       };
-
-     var addComment = function (comment) {
-       coms.push(comment);
-     };
-
-     return {
-       getComs: getComments,
-       addCom : addComment,
-
-     };
-
-   });
 })();

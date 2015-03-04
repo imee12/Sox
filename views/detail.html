@@ -5,7 +5,7 @@
 <h2>{{clientCtrl.singleItem.name}}</h2>
 <!-- <h2>{{clientCtrl.singleItem.photo}}</h2> -->
 <img class="detailPhoto" ng-src="{{ clientCtrl.singleItem.photo}}" alt="">
-<h2>{{clientCtrl.singleItem.price}}</h2>
+<h2>{{clientCtrl.singleItem.price | currency}}</h2>
 
 
 
@@ -21,7 +21,7 @@
 
 </div>
 
-    <form class="comform" ng-submit="comCtrl.addCom(newCom)">
+    <form class="comform" ng-submit="comCtrl.addCom(comCtrl.singleItem.newCom)">
 
     <input type="text" ng-model="newCom.review" placeholder="Review">
     <input type="text" ng-model="newCom.name" placeholder="Name">
