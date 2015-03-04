@@ -36,8 +36,8 @@
         adminCtrl.editItem = function (sox, id) {
 
         SuperSoxService.editSox(sox, $routeParams.soxId);
-
-          $location.path('/edit' + $routeParams.soxId);
+        $location.path('/admin');
+          // $location.path('/edit' + $routeParams.soxId);
         }
 
 

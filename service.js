@@ -133,8 +133,24 @@
         getSock: getSingleSox,
       //  getTotal: getTotal
       };
-    });
-    // .factory('CartService', function (_) {
+    })
+     .factory('CommentService', function () {
+       var coms = [];
 
+       var getComments = function () {
+          return coms;
+         //return $http.get(url);
+       };
 
+     var addComment = function (comment) {
+       coms.push(comment);
+     };
+
+     return {
+       getComs: getComments,
+       addCom : addComment,
+
+     };
+
+   });
 })();

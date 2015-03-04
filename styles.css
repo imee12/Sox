@@ -254,3 +254,15 @@ a {
 .total {
   font-size: 20px;
 }
+
+.comms {
+  border: solid 2px black;
+  font-size: 22px;
+  padding: 30px;
+}
+
+.comform {
+  width: 400px;
+  margin: 0px 0px 0px 430px;
+
+}

@@ -7,4 +7,29 @@
 <img class="detailPhoto" ng-src="{{ clientCtrl.singleItem.photo}}" alt="">
 <h2>{{clientCtrl.singleItem.price}}</h2>
 
-<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum nisi at explicabo beatae est, itaque voluptas cupiditate sequi, dolorem repellendus adipisci voluptatum quod tempora quidem magnam voluptatibus iusto! Ex, expedita!</p> -->
+
+
+
+
+<div ng-controller="CommentController as comCtrl" >
+
+  <div class="comms"  ng-repeat="com in comCtrl.coms">
+    <p>  {{com.name}}</p>
+
+    <p>  Review: {{com.review}} </p>
+  </a>
+
+</div>
+
+    <form class="comform" ng-submit="comCtrl.addCom(newCom)">
+
+    <input type="text" ng-model="newCom.review" placeholder="Review">
+    <input type="text" ng-model="newCom.name" placeholder="Name">
+    <button type="submit">Add Coment</button>
+
+    </form>
+
+
+
+
+</div>
