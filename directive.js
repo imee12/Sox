@@ -6,12 +6,8 @@
       return {
         restrict: 'E',
 
-        scope: {
-          title: '@',
-          price: '@',
-        },
-        templateUrl: 'views/directive.html',
+        template: "<div> Please work. I'm sad </div>"
 
-      };
-    });
+      }
+    })
   })();

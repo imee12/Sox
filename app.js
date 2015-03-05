@@ -53,9 +53,9 @@
       })
 
       .when('/directive', {
-        templateUrl: 'views/directive.html',
-        controller: 'ClientController as clientCtrl'
-
+         templateUrl: 'views/directive.html',
+         controller: 'ClientController as clientCtrl'
+        //template: '<h1>{{hello}}</h1><input type="text" ng-model="hello">'
       })
 
       .otherwise({
