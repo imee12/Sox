@@ -58,6 +58,13 @@
         //template: '<h1>{{hello}}</h1><input type="text" ng-model="hello">'
       })
 
+      .when('/api', {
+        templateUrl: 'views/apiprac.html',
+        controller: 'InstaController as InstaCtrl'
+       //template: '<h1>{{hello}}</h1><input type="text" ng-model="hello">'
+     })
+
+
       .otherwise({
         redirectTo: '/not-found'
       });

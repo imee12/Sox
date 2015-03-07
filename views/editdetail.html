@@ -11,4 +11,18 @@
 </div>
 <footer>
 
+  <article>
+    <div class="soxx" ng-controller="InstaController as instaCtrl" ng-repeat="photo in instaCtrl.photoFeed"> <!-- {{$index}} -->
+      <img ng-src=" {item.images.standard_resolution.url}" alt"">
+
+        <p>{{photo.username}}</p>
+        <img ng-src="{{ sox.photo}}" alt="">
+      <p>  Price: {{sox.price | currency}} </p>
+        <button ng-click="adminCtrl.deleteSuperSox(sox._id)">Delete Sox</button> |
+      <!--   <button ng-click="mainCtrl.editSuperHero(hero)">Edit Hero</button> -->
+    <a href="#/edit/{{sox._id}}">Edit</a>
+    </div>
+  </article>
+
+
 </footer>

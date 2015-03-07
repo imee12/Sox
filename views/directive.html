@@ -1,4 +1,15 @@
 
 
 <h1>DIRECTIVE PRACTICE</h1>
-<socks name ="{{sox.name}}" price="{{sox.price}}"></socks>
+<!-- <socks name ="{{sox.name}}" price="{{sox.price}}"></socks> -->
+<socks></socks>
+
+<div ng-controller="CommentController as comCtrl" >
+
+  <div class="comms"  ng-repeat="com in clientCtrl.singleItem.comments">
+<!--     <p>  {{com.name}}</p> -->
+
+    <p>  Review: {{com.review}} From: {{com.name}}</p>
+  </a>
+
+</div>
